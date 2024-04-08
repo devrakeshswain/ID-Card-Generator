@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>ID Card Generator</title>
+</head>
+<body>
+
+<div class="back">
+  <form>
+    <h3>Please fill-in the form</h3>
+    <label>Full Name</label>
+    <input type="text" id="inName" placeholder="Your name...">
+    <label>Date of birth</label>
+    <input type="date" id="inBirth" placeholder="Date of birth...">
+    <label>Field</label>
+    <input type="text" id="inField" placeholder="Field...">
+    <label>Year</label>
+    <input type="number" id="inYear" placeholder="Year...">
+    <label>ID-Number</label>
+    <input type="number" id="inNum" placeholder="Employee ID Number...">
+    <label for="file" class="upload">Upload an Image</label>
+    <br>
+    <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+    <button type="button" id="preview">Preview</button>
+  </form>
+  <div class="container">
+    <canvas id="result" class="card"></canvas>
+    <button id="down">Download</button>
+  </div>
+</div>
+
+<!-- Add these elements -->
+<img id="imgDisplayed" style="display:none;">
+<span id="name" style="display:none;"></span>
+<span id="birth" style="display:none;"></span>
+<span id="field" style="display:none;"></span>
+<span id="num" style="display:none;"></span>
+
+<script src="main.js"></script>
+</body>
+</html>
